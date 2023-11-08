@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_customer_card
+    description: This is a transformation from sales order header to be used in the customers dimension
+    columns:
+      - name: pk_customer_card
+        description: This is a primary key to every customer card
+        tests:
+          - unique
+          - not_null

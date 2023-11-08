@@ -11,3 +11,6 @@ sources:
       - name: productinventory
       - name: person
       - name: personcreditcard
+      - name: creditcard
+      - name: salesorderheader
+      - name: customer

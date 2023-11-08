@@ -2,7 +2,7 @@ with
     source_person_creditcard as (
         select 
         --pk
-            cast(businessentityid as int) as person_id 
+            cast(businessentityid as int) as entity_id 
         --fk   
             , cast(creditcardid as int) as creditcard_id
         from {{ source('sap', 'personcreditcard') }}
