@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_total_in_stock
+    description: This is a transformation from inventory 
+    columns:
+      - name: pk_products_in_stock
+        description: This is a primary key to sum every unit in stock to obtain total value
+        tests:
+          - unique
+          - not_null

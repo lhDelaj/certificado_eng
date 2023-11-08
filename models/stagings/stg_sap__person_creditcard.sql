@@ -1,0 +1,11 @@
+with
+    source_person_creditcard as (
+        select 
+        --pk
+            cast(businessentityid as int) as person_id 
+        --fk   
+            , cast(creditcardid as int) as creditcard_id
+        from {{ source('sap', 'personcreditcard') }}
+    )
+
+select * from source_person_creditcard
