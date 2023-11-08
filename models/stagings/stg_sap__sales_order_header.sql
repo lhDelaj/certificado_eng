@@ -33,8 +33,5 @@ with
     )
 
 select * from source_sales_order_header
-    where modifieddate = (select 
-                            max(modifieddate)
-                        from source_sales_order_header 
-                        )
+    where modifieddate = (select max(modifieddate) from source_sales_order_header )
         
