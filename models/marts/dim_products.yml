@@ -4,7 +4,7 @@ models:
   - name: dim_products
     description: Dimension with products info
     columns:
-      - name: pk_products
+      - name: pk_product
         description: this is a primary key to the table
         tests:
           - unique
