@@ -7,8 +7,7 @@ with
             , cast(cardnumber as int) as creditcard_number
 
             , cast(cardtype as string) as creditcard_type
-
-            ,cast(territoryid as string) as territory_id
+            
         from {{ source('sap', 'creditcard') }}
     )
 

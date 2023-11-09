@@ -39,6 +39,8 @@ with
         left join stg_creditcard on
             stg_person_creditcard.creditcard_id = stg_creditcard.creditcard_id
         where stg_creditcard.creditcard_id is not null
+        AND stg_customer.customer_id IS NOT NULL
+        AND stg_customer.person_id IS NOT NULL
      
     )
     
