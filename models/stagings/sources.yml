@@ -16,3 +16,7 @@ sources:
       - name: customer
       - name: salesorderheadersalesreason
       - name: salesreason
+      - name: address
+      - name: stateprovince
+      - name: salesterritory
+      - name: countryregion
