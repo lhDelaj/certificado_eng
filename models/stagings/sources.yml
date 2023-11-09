@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: sap
+    description: Fonte do SAP 
+    schema: sap_adw
+    tables:
+      - name: product    
+      - name: productcategory
+      - name: productsubcategory
+      - name: productinventory
+      - name: person
+      - name: personcreditcard
+      - name: creditcard
+      - name: salesorderheader
+      - name: customer

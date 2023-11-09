@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: Dimension with customers info
+    columns:
+      - name: pk_customer
+        description: this is a primary key to the table
+   
+      - name: customer_id
+        description: id for each costumer
+
+      - name: person_id
+
+      - name: creditcard_id
+    
+      - name: store_id
+
+      - name: territory_id 
+
+      - name: first_name
+
+        description: First name of customers from customer dimension table
+      - name: last_name
+
+          - not_null
+        description: First name from customers from customer dimension table.
+
+          
+ 
