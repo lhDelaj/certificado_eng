@@ -14,3 +14,5 @@ sources:
       - name: creditcard
       - name: salesorderheader
       - name: customer
+      - name: salesorderheadersalesreason
+      - name: salesreason

@@ -4,26 +4,36 @@ models:
   - name: dim_products
     description: Dimension with products info
     columns:
-      - name: pk_product
+      - name: sk_product
         description: this is a primary key to the table
         tests:
           - unique
           - not_null
       - name: product_id
         description: id for each product
-
+        tests:
+          - unique
+          - not_null
       - name: product_sub_category_id
         description: id for each sub category
-      
+        tests:
+          - not_null
       - name: product_category_id
         description: id for earch category
-      
+        tests:
+          - not_null
       - name: product_name   
-        
+        tests:
+          - not_null
       - name: category_name 
-     
+        tests:
+          - not_null
       - name: sub_category_name
+        tests:
+          - not_null
 
       - name: total_in_stock
+
+
         
   
