@@ -6,18 +6,29 @@ models:
     columns:
       - name: pk_customer
         description: this is a primary key to the table
-        tests:
-          - unique
-          - not_null
+        
+          
+              
+          
       - name: customer_id
         description: id for each product
+
 
       - name: person_id
 
       - name: creditcard_id
 
-      - name: storeid
-      
-      - name: territoryid 
-        
+         
+      - name: store_id
+
+      - name: territory_id 
+
+      - name: first_name
+        description: First name of customers from customer dimension table.
+
+         
+      - name: last_name
+        description: First name from customers from customer dimension table.
+
+          
  

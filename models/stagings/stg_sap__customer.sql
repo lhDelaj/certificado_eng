@@ -5,13 +5,14 @@ with
             cast(customerid as int) as customer_id
         --fk   
             , cast(personid as int) as person_id
+        -- used
+            , cast(territoryid as string) as territory_id
         --to be discarted
             , storeid
-            , territoryid
             , rowguid
             , modifieddate
         from {{ source('sap', 'customer') }}
-        where personid IS NOT NULL
+        order by customer_id
     )
 
 select * from source_customers

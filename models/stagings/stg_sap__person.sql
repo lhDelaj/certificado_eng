@@ -18,6 +18,7 @@ with
             , rowguid
             , modifieddate
         from {{ source('sap', 'person') }}
+        order by entity_id
     )
 
 select * from source_person

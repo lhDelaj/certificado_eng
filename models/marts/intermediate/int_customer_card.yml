@@ -9,3 +9,10 @@ models:
         tests:
           - unique
           - not_null
+      - name: creditcard_id
+
+      - name: customer_id
+
+      - name: modifieddate
+
+      - name: rn
