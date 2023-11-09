@@ -4,26 +4,31 @@ models:
   - name: dim_customers
     description: Dimension with customers info
     columns:
-      - name: pk_customer
+      - name: sk_customer
         description: this is a primary key to the table
+        tests: 
+          - unique
+          - not_null
    
       - name: customer_id
         description: id for each costumer
-
+        tests: 
+          - unique
+          - not_null
       - name: person_id
-
+        tests: 
+          - unique
+          - not_null
       - name: creditcard_id
-    
+        tests: 
+          - not_null
       - name: store_id
-
       - name: territory_id 
-
+        tests: 
+          - not_null
       - name: first_name
-
         description: First name of customers from customer dimension table
       - name: last_name
-
-          - not_null
         description: First name from customers from customer dimension table.
 
           

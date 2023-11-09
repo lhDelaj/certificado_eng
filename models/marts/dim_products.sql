@@ -36,13 +36,13 @@ with
             stg_products_category.product_category_id = stg_products_sub_category.product_category_id
         left join total_in_stock on
             total_in_stock.product_id = stg_products.product_id
-        where total_quantity_in_stock IS NOT NULL
+    
 
     )
 
     , generate_key as (
         select  
-            row_number() over(order by product_id) as pk_product
+            row_number() over(order by product_id) as sk_product
             , *
         from join_tables
     )
