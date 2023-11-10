@@ -34,7 +34,7 @@ with
         left join stg_state_provinces on
             stg_addresses.state_province_id = stg_state_provinces.state_province_id
         left join stg_sales_territories on
-            stg_state_provinces.territory_id = stg_sales_territories.territory_id
+            stg_sales_territories.territory_id = stg_state_provinces.territory_id
         left join stg_country_region on
             stg_sales_territories.country_region_code = stg_country_region.country_region_code
     )

@@ -2,7 +2,6 @@ with
     source_sales_territories as (
         select 
         --pk
-       
             cast(territoryid as int) as territory_id
 
             , cast(`group` as string) as continent
