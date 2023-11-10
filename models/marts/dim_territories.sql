@@ -5,7 +5,10 @@ with
         from {{ ref('stg_sap__addresses') }}
     )
     
-
+    , stg_business_entity_addresses as (
+        select *
+        from {{ ref('stg_sap__business_entity_addresses') }}
+    )
     , stg_state_provinces as (
         select *
         from {{ ref('stg_sap__state_provinces') }}
@@ -25,6 +28,7 @@ with
     , join_tables as (
         select 
             stg_addresses.address_id
+            , stg_business_entity_addresses.person_id
             , stg_addresses.city
             , stg_addresses.postal_code
             , addressline1
@@ -38,6 +42,8 @@ with
             stg_sales_territories.territory_id = stg_state_provinces.territory_id
         left join stg_country_region on
             stg_sales_territories.country_region_code = stg_country_region.country_region_code
+        left join stg_business_entity_addresses on
+            stg_addresses.address_id = stg_business_entity_addresses.address_id
     )
     
     , generate_key as (
