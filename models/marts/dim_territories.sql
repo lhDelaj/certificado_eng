@@ -27,6 +27,7 @@ with
             stg_addresses.address_id
             , stg_addresses.city
             , stg_addresses.postal_code
+            , addressline1
             , stg_country_region.country_name
             , stg_state_provinces.state_province_name
             , stg_sales_territories.continent
@@ -41,7 +42,7 @@ with
     
     , generate_key as (
     select  
-        row_number() over(order by address_id) as sk_territory
+        row_number() over(order by postal_code) as sk_territory
         , *
     from join_tables
     

@@ -1,10 +1,9 @@
 with
     source_products_inventory as (
         select cast(productid as int) as product_id
-            , locationid
+            , cast(quantity as int) as quantity_in_stock
             , shelf
-            , bin
-            , quantity     
+            , bin    
         from {{ source('sap', 'productinventory') }}
         order by product_id
     )

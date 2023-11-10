@@ -19,3 +19,4 @@ with
     )
 
 select * from source_addresses
+order by address_id

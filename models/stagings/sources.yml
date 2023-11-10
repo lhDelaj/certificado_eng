@@ -20,3 +20,4 @@ sources:
       - name: stateprovince
       - name: salesterritory
       - name: countryregion
+      - name: salesorderdetail

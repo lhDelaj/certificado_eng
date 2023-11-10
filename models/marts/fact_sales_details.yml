@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: fact_sales_details
+    description: Sales fact table in adventure works data warehouse.
+    columns: 
+      - name: sk_order_detail
+        description: Surrogate key 
+        tests:
+          - unique
+          - not_null
+      - name: order_detail_id
+        description: Primary key 
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: F key 
+        tests:
+          - not_null
+      - name: product_id
+        description: F key 
+        tests:
+          - not_null
+      - name: order_date
+        description: Order date 
+        tests:
+          - not_null
+      - name: order_quantity
+        description: Quantity of products 
+      - name: unit_price
+        description: Unit price of products 
+        tests:
+          - not_null
+      - name: unit_price_discount
+        description: Unit price discount in percentage of products 
+        tests:
+          - not_null
