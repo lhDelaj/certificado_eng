@@ -5,23 +5,22 @@ models:
     description: Fact tables with sales deail, one order per line
     columns:
       - name: sk_order
-        description: Surrogate key 
+        description: Surrogate key for  sales fact table
         tests:
           - unique
           - not_null
       - name: order_id
-        description: Pk - id for each order
+        description: Primary key for sales fact table
         tests:
           - not_null
       - name: sales_person_id
-        description: id to sales person -fk to sales person dimension table
+        description: Foreing key related to sales person dimension table
       - name: customer_id
-        description: customer id -fk to customer dimension table
+        description: Foreing key related to customer dimension table
         tests:
           - not_null
       - name: ship_to_address_id
-        description: fk to  stg sales order header
-        tests: 
+        description: Foreing key related to sales order header staging table
           - not_null
       - name: status
         description: Status of order 
@@ -49,7 +48,7 @@ models:
       - name: freight
         description: Freight of order
       - name: total
-        description: Total of order , subtotal + taxamt + freight.
+        description: Total value order , subtotal + taxamt + freight.
 
      
           

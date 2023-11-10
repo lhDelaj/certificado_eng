@@ -21,3 +21,4 @@ sources:
       - name: salesterritory
       - name: countryregion
       - name: salesorderdetail
+      - name: salesperson

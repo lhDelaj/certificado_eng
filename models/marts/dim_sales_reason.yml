@@ -5,19 +5,20 @@ models:
     description: Dimension with sales reason
     columns:
       - name: sk_order_reason
-        description: this is a primary key to the table
+        description:  Surrogate key to the table
         tests:
           - unique
           - not_null
       - name: order_id
-        description: id for each product
+        description: Primary key
         tests: 
           - not_null
       - name: reason_type
+        description: Type of sales
         tests: 
           - not_null
-      
       - name: reason_description
+        description: Description of sales 
         tests: 
           - not_null
   

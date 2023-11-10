@@ -5,6 +5,7 @@ with
             cast(businessentityid as int) as entity_id 
         --fk   
             , cast(creditcardid as int) as creditcard_id
+         --ignored colum
             , modifieddate
         from {{ source('sap', 'personcreditcard') }}
         order by entity_id
