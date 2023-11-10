@@ -1,9 +1,9 @@
 with   
     total_in_stock as (
         select product_id
-                , sum(quantity) as total_quantity_in_stock
+                , sum(quantity_in_stock) as total_quantity_in_stock
         from {{ ref('stg_sap__products_inventory') }}
-        where quantity IS NOT NULL
+        where quantity_in_stock IS NOT NULL
         group by product_id
         order by product_id
         

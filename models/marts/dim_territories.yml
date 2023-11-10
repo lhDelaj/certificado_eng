@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: dim_territories
+    description: Dimension with addresses info
+    columns:
+      - name: sk_territory
+        description: this is a primary key to the table
+
+      - name: address_id
+        description: id for each address
+
+      - name: city
+
+      - name: postal_code
+         
+      - name: country_name
+
+      - name: postal_code
+
+      - name: state_province_name
+
+      - name: continent
+
+  
