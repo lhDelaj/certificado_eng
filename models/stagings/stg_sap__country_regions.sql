@@ -3,7 +3,7 @@ with
         select 
         --pk
             cast(countryregioncode as string) as country_region_code
-
+         --columns used
             , cast(name as string) as country_name
 
             , modifieddate

@@ -1,12 +1,12 @@
 with
     source_person as (
         select 
-        --pk
+         --pk
             cast(businessentityid as int) as entity_id 
-   --colums to be used
+         --colums to be used
             , cast(firstname as string) as person_first_name 
             , cast(lastname as string) as person_last_name 
-        --colums discarted 
+         --colums discarted 
             , persontype
             , namestyle
             , title

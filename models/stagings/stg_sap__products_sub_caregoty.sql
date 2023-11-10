@@ -7,7 +7,7 @@ with
             , cast(productcategoryid as int) as product_category_id 
         --colums to be used
             , cast(name as string) as sub_category_name
-        --colums discarted 
+        --ignored columns
             , modifieddate
             , rowguid
         from {{ source('sap', 'productsubcategory') }}

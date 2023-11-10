@@ -1,13 +1,13 @@
 with
     source_customers as (
         select 
-        --pk
+         --pk
             cast(customerid as int) as customer_id
-        --fk   
+         --fk   
             , cast(personid as int) as person_id
-        -- used
+         -- used
             , cast(territoryid as string) as territory_id
-        --to be discarted
+         --to be discarted
             , storeid
             , rowguid
             , modifieddate

@@ -5,31 +5,37 @@ models:
     description: Dimension with customers info
     columns:
       - name: sk_customer
-        description: this is a primary key to the table
+        description: surrogate key
         tests: 
           - unique
           - not_null
    
       - name: customer_id
-        description: id for each costumer
+        description: primary key
         tests: 
           - unique
           - not_null
       - name: person_id
+        description: foreing key related to customer table staging table    
         tests: 
           - unique
           - not_null
       - name: creditcard_id
+        description: foreing key related to credit card staging table
         tests: 
           - not_null
-      - name: store_id
       - name: territory_id 
+        description: foreing key related to customer and adresses staging table
         tests: 
           - not_null
-      - name: first_name
-        description: First name of customers from customer dimension table
-      - name: last_name
-        description: First name from customers from customer dimension table.
+      - name: person_first_name
+        description: First name  from customer 
+        tests: 
+          - not_null
+      - name: person_last_name
+        description: last name  from customer 
+        tests: 
+          - not_null
 
           
  

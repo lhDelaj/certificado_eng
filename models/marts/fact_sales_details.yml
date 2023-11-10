@@ -5,21 +5,21 @@ models:
     description: Sales fact table in adventure works data warehouse.
     columns: 
       - name: sk_order_detail
-        description: Surrogate key 
+        description: Surrogate key for sales details fact table
         tests:
           - unique
           - not_null
       - name: order_detail_id
-        description: Primary key 
+        description: Primary key for sales details fact table
         tests:
           - unique
           - not_null
       - name: order_id
-        description: F key 
+        description: Foreign key related to order reason dimension table and to staging sales order header
         tests:
           - not_null
       - name: product_id
-        description: F key 
+        description: Foreign key related to products dimension table
         tests:
           - not_null
       - name: order_date

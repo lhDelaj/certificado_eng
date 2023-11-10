@@ -5,21 +5,32 @@ models:
     description: Dimension with addresses info
     columns:
       - name: sk_territory
-        description: this is a primary key to the table
-
+        description: Surrogate Key to territories dimension table
+        tests:
+          - unique
+          - not_null
       - name: address_id
-        description: id for each address
-
+        description: Primary key to territories dimension table
+        tests:
+          - unique
+          - not_null
       - name: city
-
+        description: City of territories dimension table
+        tests:
+          - not_null
       - name: postal_code
-         
+        description: Postal code of territories dimension table.
+        tests:
+          - not_null
       - name: country_name
-
-      - name: postal_code
-
+        description: Country region of territories dimension table.
+        tests:
+          - not_null
       - name: state_province_name
-
+        description: State/province name of territories dimension table.
+        tests:
+          - not_null
       - name: continent
-
-  
+        description: Continent of territories dimension table.
+        tests:
+          - not_null
