@@ -31,7 +31,7 @@ with
             , stg_business_entity_addresses.customer_id
             , stg_addresses.city
             , stg_addresses.postal_code
-            , addressline1
+            , stg_addresses.addressline1
             , stg_country_region.country_name
             , stg_state_provinces.state_province_name
             , stg_sales_territories.continent
