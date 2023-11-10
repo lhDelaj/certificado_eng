@@ -14,7 +14,7 @@ models:
         tests:
           - unique
           - not_null
-      - name: person_id
+      - name: customer_id
         description: Primary key to business entity adresses
         tests:
           - not_null

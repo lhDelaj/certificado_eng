@@ -28,7 +28,7 @@ with
     , join_tables as (
         select 
             stg_addresses.address_id
-            , stg_business_entity_addresses.person_id
+            , stg_business_entity_addresses.customer_id
             , stg_addresses.city
             , stg_addresses.postal_code
             , addressline1

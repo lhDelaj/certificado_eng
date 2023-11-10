@@ -4,7 +4,7 @@ with
          --pk
             cast(addressid as int) as address_id
          --fk
-            , cast(businessentityid as int) as person_id
+            , cast(businessentityid as int) as customer_id
          --columns to be used
             , addresstypeid
             , rowguid					
