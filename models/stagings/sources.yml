@@ -22,3 +22,4 @@ sources:
       - name: countryregion
       - name: salesorderdetail
       - name: salesperson
+      - name: businessentityaddress
