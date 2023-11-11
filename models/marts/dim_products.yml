@@ -37,7 +37,12 @@ models:
 
       - name: total_in_stock
         description: total units in stock from intermediate table total in stock
-        
+      - name: color
+        description: color
+      - name: weight
+        description: weight
+      - name: product_size
+        description: size        
 
 
         

@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: fact_sales_details
-    description: Sales fact table in adventure works data warehouse.
+    description: Sales details, one unit per sale row
     columns: 
       - name: sk_order_detail
         description: Surrogate key for sales details fact table
