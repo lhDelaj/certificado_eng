@@ -13,4 +13,3 @@ with
     )
 
 select * from source_business_entity_addresses
-order by address_id

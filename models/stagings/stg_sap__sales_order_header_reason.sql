@@ -9,7 +9,7 @@ with
             , modifieddate
         
         from {{ source('sap', 'salesorderheadersalesreason') }}
-        order by order_id
+
         
     )
 

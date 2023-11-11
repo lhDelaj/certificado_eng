@@ -12,7 +12,6 @@ with
             , rowguid
             , modifieddate
         from {{ source('sap', 'customer') }}
-        order by customer_id
     )
 
 select * from source_customers

@@ -18,6 +18,7 @@ with
             , sales_order_details.order_quantity
             , sales_order_details.unit_price
             , sales_order_details.unit_price_discount
+            , cast(sales_order_details.unit_price*sales_order_details.order_quantity as numeric) as total_sale
         from sales_order_details
         left join sales_order_header on
             sales_order_details.order_id = sales_order_header.order_id

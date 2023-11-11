@@ -8,7 +8,7 @@ with
          --ignored colum
             , modifieddate
         from {{ source('sap', 'personcreditcard') }}
-        order by entity_id
+
 
     )
 
