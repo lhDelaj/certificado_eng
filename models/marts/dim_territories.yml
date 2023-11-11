@@ -26,6 +26,10 @@ models:
         description: Postal code of territories dimension table.
         tests:
           - not_null
+      - name: country_region_code
+        description: country region code
+        tests:
+          - not_null
       - name: country_name
         description: Country region of territories dimension table.
         tests:
@@ -38,3 +42,4 @@ models:
         description: Continent of territories dimension table.
         tests:
           - not_null
+      - name: state_province_id

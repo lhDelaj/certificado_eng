@@ -29,6 +29,9 @@ with
             , stg_products_category.category_name
             , stg_products_sub_category.sub_category_name
             , total_in_stock.total_quantity_in_stock
+            , stg_products.product_size
+            , stg_products.color
+            , stg_products.weight
         from stg_products
         left join stg_products_sub_category on  
             stg_products.product_sub_category_id = stg_products_sub_category.product_sub_category_id
