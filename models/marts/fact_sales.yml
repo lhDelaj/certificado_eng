@@ -12,6 +12,7 @@ models:
       - name: order_id
         description: Primary key for sales fact table
         tests:
+          - unique
           - not_null
       - name: sales_person_id
         description: Foreing key related to sales person dimension table

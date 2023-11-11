@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: dim_products
-    description: Dimension with products info
+    description: Dimension with products info, onde produt per row
     columns:
       - name: sk_product
         description: surrogate key 

@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: dim_sales_reason
-    description: Dimension with sales reason
+    description: Dimension with sales reason, one reason per order per row
     columns:
       - name: sk_order_reason
         description:  Surrogate key to the table

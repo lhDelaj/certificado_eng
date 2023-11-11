@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: dim_customers
-    description: Dimension with customers info
+    description: Dimension with customers info one customer per row
     columns:
       - name: sk_customer
         description: surrogate key
