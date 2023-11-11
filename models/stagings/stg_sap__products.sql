@@ -10,7 +10,7 @@ with
             , cast(color as string) as color
             , cast(productline as string) as product_line
             , cast(style as string) as style
-            , cast(size as string) as size
+            , cast(size as string) as product_size
             , cast(`weight` as numeric) as `weight`
             , cast(listprice as numeric) as list_price
             , cast(standardcost as numeric) as standard_cost
