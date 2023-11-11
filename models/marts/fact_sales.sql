@@ -8,10 +8,6 @@ with
         from {{ ref('stg_sap__sales_order_header') }}
     )
 
-    , creditcard as (
-        select *
-        from {{ ref('stg_sap__creditcard') }}
-    )
     
     , join_tables as (
         select 
@@ -29,12 +25,9 @@ with
             , sales_order_header.freight
             , sales_order_header.total
         from sales_order_header
-        left join creditcard on
-            sales_order_header.creditcard_id = creditcard.creditcard_id
         left join dim_customers on
             sales_order_header.customer_id = dim_customers.customer_id
     )
-
     , generate_key as (
     select  
         row_number() over(order by order_id) as sk_order
