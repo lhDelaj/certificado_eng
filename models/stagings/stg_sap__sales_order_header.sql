@@ -31,7 +31,7 @@ with
             , rowguid
             , modifieddate
         from {{ source('sap', 'salesorderheader') }}
-        order by customer_id
+
         
     )
 

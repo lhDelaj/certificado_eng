@@ -1,5 +1,12 @@
 with    
-    sales_order_header as (
+
+        credit_card as (
+    select * 
+    from {{ ref('stg_sap__creditcard') }}
+    )
+    
+    
+    , sales_order_header as (
         select *
         from {{ ref('stg_sap__sales_order_header') }}
     )
@@ -11,16 +18,24 @@ with
     
     , join_tables as (
         select 
-            sales_order_details.order_detail_id
+                sales_order_details.order_detail_id
             , sales_order_details.order_id
+            , sales_order_header.sales_person_id
+            , sales_order_header.customer_id
+            , sales_order_header.ship_to_address_id
+            , credit_card.creditcard_id
             , sales_order_details.product_id
+            , sales_order_header.status
             , sales_order_header.order_date
             , sales_order_details.order_quantity
             , sales_order_details.unit_price
             , sales_order_details.unit_price_discount
+            , cast(sales_order_details.unit_price*sales_order_details.order_quantity as numeric) as total_sale
         from sales_order_details
         left join sales_order_header on
             sales_order_details.order_id = sales_order_header.order_id
+        left join credit_card on
+            sales_order_header.creditcard_id = credit_card.creditcard_id
     )
 
     , generate_key as (
