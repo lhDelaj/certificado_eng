@@ -36,3 +36,7 @@ models:
         description: Unit price discount in percentage of products 
         tests:
           - not_null
+      - name: total_gross
+        description: total gross 
+      - name: total_net
+        description: net value
