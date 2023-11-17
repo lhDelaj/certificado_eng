@@ -23,7 +23,7 @@ with
             , sales_order_header.sales_person_id
             , sales_order_header.customer_id
             , sales_order_header.ship_to_address_id
-            , credit_card.creditcard_id
+            , sales_order_header.creditcard_id
             , sales_order_details.product_id
             , sales_order_header.status
             , sales_order_header.order_date
@@ -35,8 +35,6 @@ with
         from sales_order_details
         left join sales_order_header on
             sales_order_details.order_id = sales_order_header.order_id
-        left join credit_card on
-            sales_order_header.creditcard_id = credit_card.creditcard_id
     )
 
     , generate_key as (

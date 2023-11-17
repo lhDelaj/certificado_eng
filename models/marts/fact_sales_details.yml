@@ -18,10 +18,25 @@ models:
         description: Foreign key related to order reason dimension table and to staging sales order header
         tests:
           - not_null
+      - name: sales_person_id
+        description: Foreign key related to order reason dimension table and to staging sales order header
+      - name: customer_id
+        description: Foreign key related to customer dimension 
+        tests:
+          - not_null
+      - name: ship_to_address_id
+        description: Foreign key related to territories dimension table 
+        tests:
+          - not_null
+      - name: creditcard_id
+        description: Foreign key related to customers dimension table
+          - not_null
       - name: product_id
         description: Foreign key related to products dimension table
         tests:
           - not_null
+      - name: status
+        description: Foreign key related to products dimension table
       - name: order_date
         description: Order date 
         tests:
