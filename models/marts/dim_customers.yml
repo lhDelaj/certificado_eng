@@ -8,8 +8,7 @@ models:
         description: surrogate key
         tests: 
           - unique
-          - not_null
-   
+          - not_null   
       - name: customer_id
         description: primary key
         tests: 
@@ -36,6 +35,10 @@ models:
         description: last name  from customer 
         tests: 
           - not_null
+      - name: creditcard_type
+        description: credit card brand
+
+      
 
           
  

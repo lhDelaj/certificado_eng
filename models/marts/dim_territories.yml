@@ -30,6 +30,10 @@ models:
         description: country region code
         tests:
           - not_null
+      - name: addressline1
+        description: Adress related to dim territories
+        tests:
+          - not_null
       - name: country_name
         description: Country region of territories dimension table.
         tests:
